@@ -1,0 +1,150 @@
+/* Configurações Globais e Fontes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    text-align: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.2rem;
+}
+
+/* Conteúdo e Cards */
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.card-tela {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border: 4px solid #a5d6a7;
+}
+
+.esconde {
+    display: none !important;
+}
+
+/* Painel de Status */
+.painel-status {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #1b5e20;
+}
+
+/* Pergunta e Respostas */
+#texto-pergunta {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.grade-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-opcao {
+    background-color: #f1f8e9;
+    border: 2px solid #81c784;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #2e7d32;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-opcao:hover {
+    background-color: #c8e6c9;
+    transform: translateY(-2px);
+}
+
+/* Estilos de Validação */
+.btn-opcao.correta {
+    background-color: #81c784 !important;
+    color: white;
+    border-color: #388e3c;
+}
+
+.btn-opcao.incorreta {
+    background-color: #e57373 !important;
+    color: white;
+    border-color: #d32f2f;
+}
+
+/* Botões Principais */
+.btn-principal {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px #e65100;
+    transition: transform 0.1s;
+}
+
+.btn-principal:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* Feedback e Resultados */
+.feedback {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.medalha {
+    font-size: 4rem;
+    margin: 15px 0;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
