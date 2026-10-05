@@ -1,0 +1,105 @@
+// Banco de Perguntas adequado ao 6º Ano (Matemática)
+const questions = [
+    {
+        question: "Qual fração representa a metade de um número?",
+        options: ["1/4", "1/2", "3/4", "2/1"],
+        answer: 1
+    },
+    {
+        question: "Quanto é 3/5 + 1/5?",
+        options: ["4/10", "4/5", "2/5", "3/10"],
+        answer: 1
+    },
+    {
+        question: "Qual o resultado de 0,5 + 0,25?",
+        options: ["0,30", "0,70", "0,75", "1,00"],
+        answer: 2
+    },
+    {
+        question: "Em uma pizza dividida em 8 fatias, se você comer 3, qual fração sobrou?",
+        options: ["3/8", "5/8", "8/3", "1/2"],
+        answer: 1
+    },
+    {
+        question: "Qual é o menor número primo?",
+        options: ["1", "2", "3", "0"],
+        answer: 1
+    }
+];
+
+// Estado do Jogo
+let currentQuestionIndex = 0;
+let score = 0;
+let lives = 3;
+
+// Elementos do DOM
+const startScreen = document.getElementById('start-screen');
+const gameScreen = document.getElementById('game-screen');
+const endScreen = document.getElementById('end-screen');
+
+const btnStart = document.getElementById('btn-start');
+const btnRestart =Aqui está um projeto completo de um **Quiz Interativo de Ciências (Biomas e Ecossistemas)**, adequado para o 6º ano do Ensino Fundamental. O código é limpo, educativo, responsivo e dividido exatamente nos três arquivos solicitados (`index.html`, `style.css` e `script.js`).
+
+---
+
+### 1. `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploradores da Natureza - Quiz de Ciências 6º Ano</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="[https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap](https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap)" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <h1>🌱 Exploradores da Natureza 🌿</h1>
+        <p>Desafio de Ciências - 6º Ano</p>
+    </header>
+
+    <main class="conteudo-principal">
+        <!-- Tela Inicial -->
+        <section id="tela-inicio" class="card-tela">
+            <h2>Bem-vindo, Jovem Cientista!</h2>
+            <p>Teste seus conhecimentos sobre o planeta Terra, ecossistemas e seres vivos.</p>
+            <button id="btn-iniciar" class="btn-principal">Começar Aventura! 🚀</button>
+        </section>
+
+        <!-- Tela do Jogo -->
+        <section id="tela-jogo" class="card-tela esconde">
+            <div class="painel-status">
+                <span id="contador-pergunta">Pergunta 1 de 5</span>
+                <span id="pontuacao-atual">Pontos: 0</span>
+            </div>
+
+            <div id="caixa-pergunta">
+                <h3 id="texto-pergunta">Carregando pergunta...</h3>
+            </div>
+
+            <div id="opcoes-respostas" class="grade-opcoes">
+                <!-- As opções serão inseridas via JavaScript -->
+            </div>
+
+            <div id="mensagem-feedback" class="feedback esconde"></div>
+        </section>
+
+        <!-- Tela Final -->
+        <section id="tela-fim" class="card-tela esconde">
+            <h2>Fim da Missão! 🎉</h2>
+            <p id="resultado-final">Você acertou X de Y perguntas!</p>
+            <div id="medalha-desempenho" class="medalha">🏆</div>
+            <button id="btn-reiniciar" class="btn-principal">Jogar Novamente 🔄</button>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido para a feira de Ciências - Ensino Fundamental I</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
